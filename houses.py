@@ -22,7 +22,7 @@ import seaborn as sns
 
 
 """ Write the address to look foor """
-NUMBER = "3"
+NUMBER = "14"
 STREET = "Kerkstraat"
 CITY = "Kapellen"
 POSTCODE = 2950
