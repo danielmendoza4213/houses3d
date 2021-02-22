@@ -1,6 +1,5 @@
 import pandas as pd
 
-from files import belgium
 from files import dsm_df
 from files import dtm_df
 

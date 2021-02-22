@@ -1,7 +1,9 @@
 DSM
 DTM
 __pycache__
-belgium.csv
 chm.tif
-essay2.ipynb
-first_part.ipynb
+houses.py
+.ipynb_checkpoints
+.vscode
+clipped.tif
+k15.tif
