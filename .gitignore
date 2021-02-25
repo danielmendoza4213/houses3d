@@ -1,11 +1,4 @@
-DSM
-DTM
 __pycache__
-chm.tif
 .ipynb_checkpoints
 .vscode
-clipped.tif
-k15.tif
-DSM*
-DTM*
-house.py
+GeoTIFF*
