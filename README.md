@@ -19,7 +19,7 @@ In order to do the above, we need python packages that request information direc
 
 ### Example
 
-![Getting Started](Images\plot3d_example.png)
+![example1](/Images/plot3d_example.png)
 
 ### Pending things to do:
 
