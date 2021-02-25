@@ -1,5 +1,7 @@
 ### 3D Houses3
 
+### Publication date: 25 Feb 2021
+
 ### Objective:
 
 From an address (in Flanders) obtain a 3d model of the property.
@@ -14,9 +16,9 @@ The code can be found in **3DHouses.py**
 
 First we need to transform an address into geographic coordinates, then find what is the shape of the property and then find only the height data for the property area.
 
-The height of a property can be obtained by calculating the Canopy Height Model. This model is the difference between the surface map (DSM) that includes buildings, trees, etc; and the map that only includes the bare ground without any objets (DMT).
+The height of a property can be obtained by calculating the Canopy Height Model. This model is the difference between the surface map (DSM) that includes buildings, trees, etc, and the map (DMT) that only includes the bare ground without any objets.
 
-Once the model data is obtained, we can plot the surface of the property.
+Once the model is calculated and the data is obtained, we can plot the surface of the property.
 
 In order to do the above, we need python packages that request information directly from a database (API), packages that manipulate geographic information in the form of images and matrices, and also packages for plotting.
 
@@ -24,7 +26,7 @@ In order to do the above, we need python packages that request information direc
 
 ### Procces:
 
-1. Obtain via API, the geographic coordinates and dimensions of the property.
+1. Obtain (via API) the geographic coordinates and dimensions of the property.
 2. Select the map to analyze.
 3. Download and extract the DTM map
 4. Download and extract the DSM map
@@ -39,11 +41,12 @@ In order to do the above, we need python packages that request information direc
 
 ### Pending things to do:
 
-Find a way to access maps without having to download them.
+- Find a way to access maps without having to download them.
 
-Plot other information about the houses, such as diameter, area or other characteristics.
+- Plot other information about the houses, such as diameter, area or other characteristics.
 
 #### Other files:
 
 - The Files **Essay_with_WMS\*** is a work in progress that attempts to obtain the maps without having to download them.
 - **CSV_production** is the code used to prepared dsm_info.csv and dtm_info.csv. These two csv files show the maps of the region and its geographic boundaries.
+- Reshape the Code with an OOP approach

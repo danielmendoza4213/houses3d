@@ -10,7 +10,6 @@ import rioxarray as rxr
 """packages to plot  the elevation of the house in 1d"""
 import matplotlib.pyplot as plt
 import earthpy.plot as ep
-from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
 
 """packages to plot the elevation of the house in 3d"""
@@ -83,6 +82,7 @@ y = polygone[0][0][1]
 
 """ tthere are two csv files in the directory, for DMS and DMT, both files show the extension of each tif file.
      We will use this csv to select the tiff file to analyze."""
+
 dtm_df = pd.read_csv("dtm_info.csv")
 dtm_df.set_index("file", inplace=True)
 
@@ -118,9 +118,12 @@ base_url_dtm = (
 base_url_dsm = (
     "https://downloadagiv.blob.core.windows.net/dhm-vlaanderen-ii-dsm-raster-1m/"
 )
+
+
 """ now we have a extact url for the desire tif file"""
 url_dtm = base_url_dtm + post_link_dtm
 url_dsm = base_url_dsm + post_link_dsm
+
 
 """ function to download the file"""
 """ for DTM"""
@@ -155,6 +158,7 @@ def download_dsm(url_dsm):
 download_dtm(url_dtm)
 download_dsm(url_dsm)
 
+
 """Once both files are downloaded ( it will take some time),we need to unzip the tif files,
      they will be stored in the folder GeoTiff"""
 
@@ -167,9 +171,11 @@ handledsm = zipfile.ZipFile(targetdsm)
 handledtm.extract("GeoTIFF/" + dtm_selected)
 handledsm.extract("GeoTIFF/" + dsm_selected)
 
+
 """ With the desired file, we will read the tif file as an array and at the same time we will clip the shape of the property.
     The shape of the property comes from the house_info function (request api). Clipping meeans that the code will only
     read the selected shape of the building but this shape need to be inside a list called geometries"""
+
 
 geometries = [{"type": "Polygon", "coordinates": polygone}]
 
@@ -180,13 +186,17 @@ read_dtm = rxr.open_rasterio("GeoTIFF/" + dtm_selected).rio.clip(
     geometries, from_disk=True
 )
 
+
 """ with both DSM and DTM as array, we create the canopy height model, to only show the heights of buildings and other structures"""
 canopy = read_dsm - read_dtm
+
 """ rasteriza of the canopy, to save the area selected as tif"""
 canopy.rio.to_raster("clipped.tif")
+
 """ read the canpy file"""
 with rio.open("clipped.tif") as img:
     chm = img.read(1)
+
 """plot 1d the selected ares + hillshade to look at it better """
 fig, ax = plt.subplots(figsize=(10, 6))
 ep.plot_bands(
@@ -194,6 +204,7 @@ ep.plot_bands(
 )
 ax.imshow(chm, cmap="Greys", alpha=0.5)
 plt.show()
+
 """ plot the elevations """
 z = chm
 sh_0, sh_1 = z.shape
