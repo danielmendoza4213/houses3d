@@ -45,8 +45,9 @@ In order to do the above, we need python packages that request information direc
 
 - Plot other information about the houses, such as diameter, area or other characteristics.
 
+- Reshape the Code with an OOP approach
+
 #### Other files:
 
 - The Files **Essay_with_WMS\*** is a work in progress that attempts to obtain the maps without having to download them.
 - **CSV_production** is the code used to prepared dsm_info.csv and dtm_info.csv. These two csv files show the maps of the region and its geographic boundaries.
-- Reshape the Code with an OOP approach
