@@ -84,10 +84,10 @@ y = polygone[0][0][1]
 """ tthere are two csv files in the directory, for DMS and DMT, both files show the extension of each tif file.
      We will use this csv to select the tiff file to analyze."""
 
-dtm_df = pd.read_csv("dtm_info.csv")
+dtm_df = pd.read_csv("ressources/dsm_info.csv")
 dtm_df.set_index("file", inplace=True)
 
-dsm_df = pd.read_csv("dsm_info.csv")
+dsm_df = pd.read_csv("ressources/dsm_info.csv")
 dsm_df.set_index("file", inplace=True)
 
 """here the tiff file is selected, both for DSM and DMT according to X and Y coordinates   """

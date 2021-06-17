@@ -4,7 +4,7 @@
 
 ### Objective:
 
-From an address (in Flanders) obtain a 3d model of the property.
+To obtain a 3d plot of a house in in Flanders.
 
 ### About the Proyect:
 
@@ -22,7 +22,7 @@ Once the model is calculated and the data is obtained, we can plot the surface o
 
 In order to do the above, we need python packages that request information directly from a database (API), packages that manipulate geographic information in the form of images and matrices, and also packages for plotting.
 
-![CMH](/Images/canopy.png)
+![CMH](/Images/canopy.png = 50px)
 
 ### Procces:
 
