@@ -36,7 +36,7 @@ In order to do the above, we need python packages that request information direc
 
 ### Example
 
-<img src="Images/plot1_example.png" alt="canopy" width="500"/> <img src="Images/plot3d_example.png" alt="canopy" width="500"/>
+<img src="Images/plot1_example.png" alt="canopy" width="425"/> <img src="Images/plot3d_example.png" alt="canopy" width="425"/>
 
 ### Pending things to do:
 
