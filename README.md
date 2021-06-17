@@ -21,8 +21,7 @@ The height of a property can be obtained by calculating the Canopy Height Model.
 Once the model is calculated and the data is obtained, we can plot the surface of the property.
 
 In order to do the above, we need python packages that request information directly from a database (API), packages that manipulate geographic information in the form of images and matrices, and also packages for plotting.
-
-![CMH](/Images/canopy.png = 50px)
+<img src="Images/canopy.png" alt="canopy" width="700"/>
 
 ### Procces:
 
@@ -37,7 +36,7 @@ In order to do the above, we need python packages that request information direc
 
 ### Example
 
-![example1](/Images/plot3d_example.png)
+<img src="Images/plot1_example.png" alt="canopy" width="500"/> <img src="Images/plot3d_example.png" alt="canopy" width="500"/>
 
 ### Pending things to do:
 
@@ -50,4 +49,5 @@ In order to do the above, we need python packages that request information direc
 #### Other files:
 
 - The Files **Essay_with_WMS\*** is a work in progress that attempts to obtain the maps without having to download them.
-- **CSV_production** is the code used to prepared dsm_info.csv and dtm_info.csv. These two csv files show the maps of the region and its geographic boundaries.
+- Ressources folfer. Contains files during the exploration phase and others like:
+  - **CSV_production** is the code used to prepared dsm_info.csv and dtm_info.csv. These two csv files show the maps of the region and its geographic boundaries.
